@@ -1,5 +1,11 @@
 # PERSONAJES
+# Jacobo: 
+Es un adulto de 28 años residente de la ciudad de Dolores Hidalgo, ha trabajado en el negocio de las nieves desde que tenía 7 años, pues el viene de una familia humilde que ha trabajado en ese negocio por tres generaciones. él es entusiasta y comprometida con su trabajo. Está dispuesto a asumir desafíos importantes y es cuidadoso en sus decisiones, además es muy valiente al enfrentarse a situaciones difíciles.
 
+## Diseño:
+<div style="text-align: center;">
+    <img src="https://github.com/Carlos-Soto-L/IcyDefender/blob/main/PERSONAJES/JACOBO/PERSONAJE_JACOBO_001.png" alt="Descripción de la imagen">
+    
 # Miembros del comité de turismo:
 Estos son personas muy experimentadas en su cargo, son muy amables y siempre están buscando la forma de ayudar a los ciudadanos.
 ## Diseños:
