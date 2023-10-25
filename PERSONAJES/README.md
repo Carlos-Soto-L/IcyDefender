@@ -1,4 +1,7 @@
 # PERSONAJES
+# Vestimenta
+Los zombies tendrán puesto ropa casual, ya que la tragedia comenzó en un evento público no formal, los únicos que tendrán ropa formal, serán los miembros del comité de turismo. Jacobo tendrá su uniforme de trabajo y Marco llevará puesto una bata científica.
+
 # Jacobo: 
 Es un adulto de 28 años residente de la ciudad de Dolores Hidalgo, ha trabajado en el negocio de las nieves desde que tenía 7 años, pues el viene de una familia humilde que ha trabajado en ese negocio por tres generaciones. él es entusiasta y comprometida con su trabajo. Está dispuesto a asumir desafíos importantes y es cuidadoso en sus decisiones, además es muy valiente al enfrentarse a situaciones difíciles.
 
