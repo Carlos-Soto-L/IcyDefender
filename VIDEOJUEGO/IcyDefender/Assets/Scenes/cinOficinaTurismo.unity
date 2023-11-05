@@ -2802,6 +2802,7 @@ MonoBehaviour:
   - "Miembro del Comit\xE9 2:\_ Muchas gracias, Jacobo, contamos contigo."
   panelPantallaNegra: {fileID: 1846523904}
   personaje: {fileID: 878456163}
+  scene: Nivel 2
 --- !u!61 &1486396882
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Paredes
+  - Proyectil
+  - Player
+  - ParedesCuerpoControl
+  - Camara
+  - ParedesOcultas
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Personajes
     uniqueID: 4037307873
+    locked: 0
+  - name: Items arriba
+    uniqueID: 3521346397
     locked: 0
   - name: Pantallas
     uniqueID: 3062140103
