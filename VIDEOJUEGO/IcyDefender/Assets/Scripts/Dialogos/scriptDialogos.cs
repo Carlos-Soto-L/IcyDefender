@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scriptJacoboComite : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class scriptJacoboComite : MonoBehaviour
 
     // Referencia al peronaje (en este caso a Jacobo)
     [SerializeField] private GameObject personaje;
+
+    // Nombre de la escena siguiente
+    public string scene;
 
 
     TMP_Text textoPantallaNegra;
@@ -132,8 +136,10 @@ public class scriptJacoboComite : MonoBehaviour
         }
         else
         {
+            print("Siguiente escena");
             panelDialogo.SetActive(false);
             // TODO: Ir a la siguiente cinematica
+            SceneManager.LoadScene(scene);
         }
     }
 
