@@ -34,6 +34,11 @@ public class scriptJacoboComite : MonoBehaviour
     // Indica que linea de dialogo estamos mostrando
     private int iLineIndex = 0;
 
+    // Cursor
+    public Texture2D cursorTexture; // Asigna aquí la textura del nuevo cursor
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
 
     public void Awake()
     {
@@ -45,6 +50,7 @@ public class scriptJacoboComite : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
 
     // Update is called once per frame
