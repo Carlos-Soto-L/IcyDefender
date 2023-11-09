@@ -27,7 +27,6 @@ public class scriptProyectil : MonoBehaviour
 
     public void lanzarProyectil(Vector2 direccion)
     {
-        Debug.Log(direccion);
         origidbody2Proyectil.velocity = direccion * fVelocidad;
         Destroy(this.gameObject, 3f);
     }
