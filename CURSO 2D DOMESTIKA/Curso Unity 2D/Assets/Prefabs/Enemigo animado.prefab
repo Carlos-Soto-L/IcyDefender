@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6420931837098606663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5826033823954175724}
+  m_Layer: 0
+  m_Name: PuntoPolvo
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5826033823954175724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420931837098606663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.091, y: -0.169, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4344782914396268702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7906024880853154878
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +43,7 @@ GameObject:
   - component: {fileID: 3287507627175566405}
   - component: {fileID: 4048227678114282588}
   - component: {fileID: 7500389011210641797}
+  - component: {fileID: 8098533262853348751}
   m_Layer: 0
   m_Name: Enemigo animado
   m_TagString: Untagged
@@ -33,6 +65,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5283170909234114451}
+  - {fileID: 5826033823954175724}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3287507627175566405
@@ -99,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c769e33b446825458178fee55022335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.3
   minX: -2.182
   maxX: 2.186
   tiempoEspera: 2
@@ -124,6 +157,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8098533262853348751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906024880853154878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645f6b636a992194783f5f31cae463c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1741352056480022195, guid: e9651e0729f3eef49a4a2bade7fd993f, type: 3}
+  point: {fileID: 5826033823954175724}
+  livingTime: 0.5
 --- !u!1001 &2467789348978189472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,6 +235,14 @@ PrefabInstance:
     - target: {fileID: 7741352021097564979, guid: b49ad23a46c8a6e4b988134ee7d8f104, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285202832353629855, guid: b49ad23a46c8a6e4b988134ee7d8f104, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285202832353629855, guid: b49ad23a46c8a6e4b988134ee7d8f104, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -953170343
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

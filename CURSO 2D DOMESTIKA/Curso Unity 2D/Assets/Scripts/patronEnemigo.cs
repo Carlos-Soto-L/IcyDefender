@@ -83,7 +83,6 @@ public class patronEnemigo : MonoBehaviour
 
             // Obtenemos la dirección entre el target y el enemigo
             Vector2 direccion = _target.transform.position - transform.position;
-            float xDireccion = direccion.x;
 
             transform.Translate(direccion.normalized * speed * Time.deltaTime);
             // ejecuta el metodo desde el inicio nuevamente.
@@ -97,12 +96,9 @@ public class patronEnemigo : MonoBehaviour
         _animator.SetBool("isDelay", true);
 
         Debug.Log("Esperando " + tiempoEspera + "segundos");
-        // Ejecuta las siguientes lineas de codigo despues de esperar x segundos.
-        if (_pistola != null)
-        {
-            _animator.SetTrigger("Disparo");
-            _pistola.disparar();
-        }
+
+        _animator.SetTrigger("Disparo");
+
         yield return new WaitForSeconds(tiempoEspera);
 
         Debug.Log("Actualizando posición del target para el movimiento del enemigo");
@@ -111,4 +107,12 @@ public class patronEnemigo : MonoBehaviour
 
 
     } // fin del metodo
+
+    public void disparar()
+    {
+        if (_pistola != null)
+        {
+            _pistola.disparar();
+        }
+    }
 }
