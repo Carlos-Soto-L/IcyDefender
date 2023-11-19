@@ -13,6 +13,11 @@ public class C3L3 : MonoBehaviour
 	private int _myPrivateInteger = 10;
 	float _myPrivateFloar = -5.0f;
 
+    private void Awake()
+    {
+        
+    }
+
 
     // Start is called before the first frame update
     void Start()

@@ -26,7 +26,7 @@ public class ScriptTeclas : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log("El clic izquierdo del rato sea soltado");
+            Debug.Log("El clic izquierdo del rato se ha soltado");
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -47,12 +47,12 @@ public class ScriptTeclas : MonoBehaviour
         //><
         if (horizontal < 0f || horizontal > 0f)
         {
-            Debug.Log("El objeto se esta miviendo a la derecha o izquierda");
+            Debug.Log("El objeto se esta miviendo a la derecha o izquierda. Valor: " + horizontal);
         }
 
         if (vertical < 0f || vertical > 0f)
         {
-            Debug.Log("El objeto se esta miviendo arriba o abajo");
+            Debug.Log("El objeto se esta miviendo arriba o abajo. Valor: " + vertical);
         }
     }
 }
