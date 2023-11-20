@@ -1,118 +1,141 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class patronEnemigo : MonoBehaviour
 {
-    public float speed = 1.0f;
-    public float minX;
-    public float maxX;
-    public float tiempoEspera = 2f;
+    public float speed = 1f;
+    public float wallAware = 0.5f;
+    public LayerMask groundLayer;
+    public float playerAware = 3f;
+    public float aimingTime = 0.5f;
+    public float shootingTime = 1.5f;
 
-    private GameObject _target;
-    // Start is called before the first frame update
-
-    //private Animator _animator;
-    private Pistola _pistola;
-
+    private Rigidbody2D _rigidbody;
     private Animator _animator;
+    private Pistola _weapon;
 
-    private void Awake()
+    // Movement
+    private Vector2 _movement;
+    private bool _facingRight;
+
+    private bool _isAttacking;
+    private AudioSource _audioSource;
+
+    void Awake()
     {
-        // Referencia a Amimator del objeto (enemigo)
+        _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        // Referencia a la pistola 
-        // Traime el hijo de mi objeto que tenga como componente el script pistola
-        _pistola = GetComponentInChildren<Pistola>();
-        
-
+        _weapon = GetComponentInChildren<Pistola>();
+        _audioSource = GetComponent<AudioSource>();
     }
+
+    // Start is called before the first frame update
     void Start()
     {
-        UpdateTarget();
-        // Se llama la funcion corrutina
-        StartCoroutine("PatrolToTarget");
+        if (transform.localScale.x < 0f)
+        {
+            _facingRight = false;
+        }
+        else if (transform.localScale.x > 0f)
+        {
+            _facingRight = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector2 direction = Vector2.right;
+
+        if (_facingRight == false)
+        {
+            direction = Vector2.left;
+        }
+
+        if (_isAttacking == false)
+        {
+            if (Physics2D.Raycast(transform.position, direction, wallAware, groundLayer))
+            {
+                Flip();
+            }
+        }
+
     }
 
-   private void UpdateTarget()
+    private void FixedUpdate()
     {
-        if (_target == null)
+        float horizontalVelocity = speed;
+
+        if (_facingRight == false)
         {
-            // Creamos un objeto referecia
-            _target = new GameObject("Target");
-            // Inicializamos su posicion en el limite izquierdo de la pantalla.
-            _target.transform.position = new Vector2(minX, transform.position.y);
-            transform.localScale = new Vector3(-1, 1, 1);
-            // Si es la primera vez, solo creame el target y posicionamelo.
-            return;
+            horizontalVelocity = horizontalVelocity * -1f;
         }
-        // Si el enemigo se encuentra en el limite izquierdo
-        if (_target.transform.position.x == minX)
+
+        if (_isAttacking)
         {
-            // Nuestro objeto de referencia se colocará ahora en el limite derecho de la pantallas
-            _target.transform.position = new Vector2(maxX, transform.position.y);
-            // Giramos el enemigo a la derecha
-            transform.localScale = new Vector3(1, 1, 1);
+            horizontalVelocity = 0f;
         }
-        // Si el enemigo se encuentra en el limite derecho de la pantalla
-        else if (_target.transform.position.x == maxX)
+
+        _rigidbody.velocity = new Vector2(horizontalVelocity, _rigidbody.velocity.y);
+    }
+
+    private void LateUpdate()
+    {
+        _animator.SetBool("isDelay", _rigidbody.velocity == Vector2.zero);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (_isAttacking == false && collision.CompareTag("Player"))
         {
-            // Nuestro objeto de referencia se colocará ahora en el limite izquierdo de la pantallas
-            _target.transform.position = new Vector2(minX, transform.position.y);
-            // Giramos el enemigo a la izquierda
-            transform.localScale = new Vector3(-1, 1, 1);
+            StartCoroutine("AimAndShoot");
         }
     }
 
-    // Función corrutina: permite ejecutar pasos intercalando las acciones y incluyendo tiempos de espera.
-    // Las funciones cirrutinas simpre devuelve un tipo de dato IEnumerator
-    private IEnumerator PatrolToTarget()
-    {// Inicio del metodo 
-        // Miestras la distancia entre el enemigo y el target sea mayor a 0.5
-        while (Vector2.Distance(transform.position, _target.transform.position) > 0.5f)
-        {
-            // Actualiza el animator (cuando se esta moviendo)
-            _animator.SetBool("isDelay", false);
+    private void Flip()
+    {
+        _facingRight = !_facingRight;
+        float localScaleX = transform.localScale.x;
+        localScaleX = localScaleX * -1f;
+        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+    }
 
-            // Obtenemos la dirección entre el target y el enemigo
-            Vector2 direccion = _target.transform.position - transform.position;
+    private IEnumerator AimAndShoot()
+    {
+        //float speedBackup = speed;
+        //speed = 0f;
 
-            transform.Translate(direccion.normalized * speed * Time.deltaTime);
-            // ejecuta el metodo desde el inicio nuevamente.
-            yield return null;
-        }
+        _isAttacking = true;
 
-        Debug.Log("Target alcanzado");
-        transform.position = new Vector2(_target.transform.position.x, transform.position.y);
-        UpdateTarget();
-        // Actualiza el animator (cuando se esta moviendo)
-        _animator.SetBool("isDelay", true);
-
-        Debug.Log("Esperando " + tiempoEspera + "segundos");
+        yield return new WaitForSeconds(aimingTime);
 
         _animator.SetTrigger("Disparo");
 
-        yield return new WaitForSeconds(tiempoEspera);
+        yield return new WaitForSeconds(shootingTime);
 
-        Debug.Log("Actualizando posición del target para el movimiento del enemigo");
-        // Vuelve a llamar la funcion corrutina
-        StartCoroutine("PatrolToTarget");
+        _isAttacking = false;
+        //speed = speedBackup;
+    }
 
-
-    } // fin del metodo
-
-    public void disparar()
+    public void CanShoot()
     {
-        if (_pistola != null)
+        if (_weapon != null)
         {
-            _pistola.disparar();
+            _audioSource.Play();
+            _weapon.disparar();
         }
+    }
+
+    private void OnEnable()
+    {
+        _isAttacking = false;
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine("AimAndShoot");
+        _isAttacking = false;
     }
 }
