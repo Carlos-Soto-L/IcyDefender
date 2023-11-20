@@ -25,9 +25,9 @@ public class C3L3 : MonoBehaviour
 		// Operators
 		// Math operators: +, -, *, /, %
 		// Last operator is "module", it returns the rest of a division
-		Debug.Log("let's sum 10 to myInteger. Right now its value is " + myInteger);
+		//Debug.Log("let's sum 10 to myInteger. Right now its value is " + myInteger);
 		myInteger = myInteger + 10;
-		Debug.Log("After the sum the value is " + myInteger);
+		//Debug.Log("After the sum the value is " + myInteger);
 
 
 
@@ -64,11 +64,11 @@ public class C3L3 : MonoBehaviour
 
 		// Flow control
 		for (int i = 0; i < 10; i++) {
-			Debug.Log(i); // Print numbers from 0 to 9 (check i < 10, never 10)
+			//Debug.Log(i); // Print numbers from 0 to 9 (check i < 10, never 10)
 		}
 
 		for (int i = 0; i < myArrayOfInts.Length; i++) {
-			Debug.Log(myArrayOfInts[i]); // Print array's content, array[i] takes the content in that index (i) from the array
+			//Debug.Log(myArrayOfInts[i]); // Print array's content, array[i] takes the content in that index (i) from the array
 		}
 
 
@@ -124,6 +124,6 @@ public class C3L3 : MonoBehaviour
 	void MyDebug(string message)
 	{
 		// Debug a message
-		Debug.Log(message);
+		//Debug.Log(message);
 	}
 }

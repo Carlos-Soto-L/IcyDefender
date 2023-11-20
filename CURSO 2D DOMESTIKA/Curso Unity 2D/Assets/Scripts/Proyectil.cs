@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class Proyectil : MonoBehaviour
 {
+    public int damage = 1;
     public float velocidad = 0;
     public Vector2 direccion;
 
@@ -17,11 +19,17 @@ public class Proyectil : MonoBehaviour
     private float _comienzoVida;
     private SpriteRenderer _renderer;
 
+    private bool _returning;
+    private Rigidbody2D _rigidbody;
+
+
+
 
     private void Awake()
     {
         // Referencia a la misma bala
         _renderer = GetComponent<SpriteRenderer>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
@@ -54,5 +62,35 @@ public class Proyectil : MonoBehaviour
 
         // Cambiará el color con ayuda de la interpolación lineal 
         _renderer.color = Color.Lerp(colorInicial, colorFinal, _porcentajeVivido);
+    }
+
+    private void FixedUpdate()
+    {
+        //  Move object
+        Vector2 movement = direccion.normalized * velocidad;
+        _rigidbody.velocity = movement;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (_returning == false && collision.CompareTag("Player"))
+        {
+            // Tell player to get hurt
+            collision.SendMessageUpwards("AddDamage", damage);
+            // Instancia el prefab en la posición del jugador
+            Destroy(gameObject);
+        }
+
+        if (_returning == true && collision.CompareTag("Enemy"))
+        {
+            collision.SendMessageUpwards("AddDamage");
+            Destroy(gameObject);
+        }
+    }
+
+    public void AddDamage()
+    {
+        _returning = true;
+        direccion = direccion * -1f;
     }
 }

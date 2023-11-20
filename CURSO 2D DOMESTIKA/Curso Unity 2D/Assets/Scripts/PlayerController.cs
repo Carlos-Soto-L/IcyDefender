@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     // Referencias
     private Rigidbody2D _rigidbody;
-    private Animator  _animator;
+    private Animator _animator;
 
     //Movimento
     private Vector2 _movement;
@@ -27,11 +27,16 @@ public class PlayerController : MonoBehaviour
     // Atacar
     private bool _isAttacking;
 
+    public GameObject puntoPartida;
+
+    private SpriteRenderer _renderer;
+
     // Awake = referencias.
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _renderer = GetComponent<SpriteRenderer>();
     }
 
 
@@ -114,7 +119,6 @@ public class PlayerController : MonoBehaviour
         // Mientras se este animando Idle que tiene la tag "espara"
         if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("espera"))
         {
-            Debug.Log("" + _longIdleTimer);
             _longIdleTimer += Time.deltaTime;
             if (_longIdleTimer >= longIdleTime)
             {
@@ -133,6 +137,12 @@ public class PlayerController : MonoBehaviour
         float localScaleX = transform.localScale.x;
         localScaleX = localScaleX * -1f;
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+    }
+
+    public void RetrayPlayer()
+    {
+        _renderer.color = Color.white;
+        this.transform.position = puntoPartida.transform.position;
     }
 
 

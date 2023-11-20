@@ -57,6 +57,10 @@ public class Pistola : MonoBehaviour
                 proyectilComponente.direccion = Vector2.left; // esto es igual a: new Vector2( -1f, 0)
             }
         }
+        else
+        {
+            Debug.Log("Vacio");
+        }
     }
 
 

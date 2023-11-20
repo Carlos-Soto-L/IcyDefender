@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Big Bullet
+  - Polvo
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -12,10 +16,10 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Hurt
+  - Hit
   - 
   - 
   - 
@@ -46,4 +50,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3076854633
+    locked: 0
+  - name: Particulas
+    uniqueID: 3113214659
     locked: 0

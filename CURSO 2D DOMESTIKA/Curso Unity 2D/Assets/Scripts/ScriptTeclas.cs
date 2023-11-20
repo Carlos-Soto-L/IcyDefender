@@ -37,7 +37,7 @@ public class ScriptTeclas : MonoBehaviour
         // Edit - Proyect setting - Input
         if (Input.GetButtonDown("Jump"))
         {
-            Debug.Log("Estas saltando");
+            //Debug.Log("Estas saltando");
         }
 
         // Movimiento de teclas A, W, S, D 
@@ -47,12 +47,12 @@ public class ScriptTeclas : MonoBehaviour
         //><
         if (horizontal < 0f || horizontal > 0f)
         {
-            Debug.Log("El objeto se esta miviendo a la derecha o izquierda. Valor: " + horizontal);
+            //Debug.Log("El objeto se esta miviendo a la derecha o izquierda. Valor: " + horizontal);
         }
 
         if (vertical < 0f || vertical > 0f)
         {
-            Debug.Log("El objeto se esta miviendo arriba o abajo. Valor: " + vertical);
+            //Debug.Log("El objeto se esta miviendo arriba o abajo. Valor: " + vertical);
         }
     }
 }
