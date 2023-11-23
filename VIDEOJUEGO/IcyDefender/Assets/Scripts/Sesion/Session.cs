@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class Session : MonoBehaviour
@@ -44,6 +45,14 @@ public class Session : MonoBehaviour
     public void setID(string valor)
     {
         Sessioninstance.sID = valor;
+    }
+
+
+    public void cerrarSesion()
+    {
+        Sessioninstance.isSesion = false;
+        Sessioninstance.sNickname = "";
+        Sessioninstance.sID = "";
     }
     // Start is called before the first frame update
     void Start()

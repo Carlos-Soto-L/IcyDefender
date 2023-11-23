@@ -7,8 +7,10 @@ public class DatosPlayer : MonoBehaviour
     private int _puntuacion = 0;
     private bool isHurt = false;
     public static DatosPlayer DatosPlayerinstance;
-    public GameObject player;
+    private GameObject player;
     private Animator oAnimatorPlayer;
+    private int iTotalVida = 5;
+    private Corazones _corazones;
 
     private DatosPlayer() { }
 
@@ -17,13 +19,19 @@ public class DatosPlayer : MonoBehaviour
         if (DatosPlayerinstance == null)
         {
             DatosPlayerinstance = this;
-            DatosPlayerinstance.oAnimatorPlayer = player.GetComponent<Animator>();
+            DatosPlayerinstance.oAnimatorPlayer = reencontrarPlayer();
             DontDestroyOnLoad(DatosPlayerinstance);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    public Animator reencontrarPlayer()
+    {
+        player = GameObject.FindWithTag("Player");
+        return player.GetComponent<Animator>();
     }
 
 
@@ -70,11 +78,48 @@ public class DatosPlayer : MonoBehaviour
     {
         
         DatosPlayerinstance.oAnimatorPlayer.SetBool("isHurt", true);
+        
         isHurt = true;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
+        DatosPlayerinstance.iTotalVida--;
+        Corazones.resetSize(DatosPlayerinstance.iTotalVida);
         DatosPlayerinstance.oAnimatorPlayer.SetBool("isHurt", false);
         isHurt = false;
 
+    }
+
+    public int getVida()
+    {
+        return DatosPlayerinstance.iTotalVida;
+    }
+
+    public void restarVida()
+    {
+        DatosPlayerinstance.iTotalVida = DatosPlayerinstance.iTotalVida - 1;
+    }
+
+    public void activarPlayer()
+    {
+        player.SetActive(true);
+    }
+
+
+    public void desactivarPlayer()
+    {
+        player.SetActive(false);
+    }
+
+    // Función para destruir el objeto DatosPlayer
+    public void DestruirDatosPlayer()
+    {
+        Destroy(gameObject);
+    }
+
+    public void retry()
+    {
+        DatosPlayerinstance.isHurt = false;
+        DatosPlayerinstance.iTotalVida = 5;
+        DatosPlayerinstance._puntuacion = 0;
     }
 
     // Update is called once per frame
