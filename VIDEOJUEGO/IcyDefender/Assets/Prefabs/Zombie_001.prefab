@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
   velocidad: 0.56
-  distanciaDetencion: 0.3
+  distanciaDetencion: 0.32
   oTransformZombie: {fileID: 0}
   iTotalVida: 10
 --- !u!70 &3278139697829851843

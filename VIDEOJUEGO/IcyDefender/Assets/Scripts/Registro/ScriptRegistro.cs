@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 
 public class ScriptRegistro : MonoBehaviour
@@ -61,7 +62,7 @@ public class ScriptRegistro : MonoBehaviour
             sResultado = DBMongo.RegisterUser(sNick, sPass);
             if (sResultado == null)
             {
-                // IR A INICIO
+                SceneManager.LoadScene("Login");
             }
             else
             {
