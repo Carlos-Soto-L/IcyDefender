@@ -44,8 +44,6 @@ public class Navegacion : MonoBehaviour
             Debug.Log("Error");
         }
 
-        Debug.Log("Aqui");
-
         SceneManager.LoadScene("Inicio");
     }
 
