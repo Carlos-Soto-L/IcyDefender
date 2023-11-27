@@ -145,7 +145,7 @@ public class scriptJacoboComite : MonoBehaviour
             print("Siguiente escena");
             panelDialogo.SetActive(false);
             // TODO: Ir a la siguiente cinematica
-            SceneManager.LoadScene(scene);
+            SceneManager.LoadScene("cinTallerJacobo");
         }
     }
 

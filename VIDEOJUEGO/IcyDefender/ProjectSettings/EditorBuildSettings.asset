@@ -27,6 +27,15 @@ EditorBuildSettings:
     path: Assets/Scenes/cinOficinaTurismo.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/cinTallerJacobo.unity
+    guid: b12ca504109c40d468c2aec33866574b
+  - enabled: 1
+    path: Assets/Scenes/cinPresentacionNieves.unity
+    guid: a20a8b47996e0b44ead5abf43e18bc25
+  - enabled: 1
+    path: Assets/Scenes/cinHabitacionJacobo.unity
+    guid: c92cde6039b61734bbfaadc059ce3efc
+  - enabled: 1
     path: Assets/Scenes/Nivel 1.unity
     guid: 7d0dc90a7c152ba4c81785a416df6712
   - enabled: 1

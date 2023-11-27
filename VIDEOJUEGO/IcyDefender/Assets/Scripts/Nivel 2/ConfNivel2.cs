@@ -12,10 +12,12 @@ public class ConfNivel2 : MonoBehaviour
     private DatosPlayer datosPlayer;
     private bool isAcaboNivel = false;
     private GameObject[] aParedSalida;
+    public GameObject alertaWin;
 
     private void Awake()
     {
         datosPlayer = DatosPlayer.DatosPlayerinstance;
+        DatosPlayer.reasignarJugador();
         aParedSalida = GameObject.FindGameObjectsWithTag("Salida");
     }
     // Start is called before the first frame update
@@ -37,8 +39,13 @@ public class ConfNivel2 : MonoBehaviour
             {
                 oSalida.SetActive(false);
             }
-            // TODO: Mover a cuando carga la pagina.
+
+            if (isAcaboNivel)
+            {
+                alertaWin.SetActive(true);
             DBMongo.ActualizarScore(datosPlayer.getPuntuacion());
+            }
+            // TODO: Mover a cuando carga la pagina.
         }
     }
 

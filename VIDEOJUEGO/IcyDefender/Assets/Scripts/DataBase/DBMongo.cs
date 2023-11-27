@@ -12,7 +12,7 @@ public class DBMongo : MonoBehaviour
     private IMongoDatabase _database;
     private static IMongoCollection<ModelPlayer> _collection;
     public static DBMongo DBMongoInstance;
-    private string iIdPlayer = "";
+    private string iIdPlayer = "655c982088249a27dc135d60";
 
     private void Awake()
     {
@@ -167,6 +167,7 @@ public class DBMongo : MonoBehaviour
             {
                 var filter = Builders<ModelPlayer>.Filter.Eq("_id", new ObjectId(DBMongoInstance.iIdPlayer));
                 var result = _collection.Find(filter).FirstOrDefault();
+                
 
                 if (result != null)
                 {

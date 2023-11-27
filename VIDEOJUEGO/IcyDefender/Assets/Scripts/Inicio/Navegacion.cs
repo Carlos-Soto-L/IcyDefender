@@ -34,6 +34,18 @@ public class Navegacion : MonoBehaviour
 
     public void irInicio()
     {
+        try
+        {
+            DatosPlayer oDatosPlayer = DatosPlayer.DatosPlayerinstance;
+            oDatosPlayer.DestruirDatosPlayer();
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Error");
+        }
+
+        Debug.Log("Aqui");
+
         SceneManager.LoadScene("Inicio");
     }
 
