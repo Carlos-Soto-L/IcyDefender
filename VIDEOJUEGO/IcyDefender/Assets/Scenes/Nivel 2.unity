@@ -12654,6 +12654,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Nivel
       objectReference: {fileID: 0}
+    - target: {fileID: 1695446445502789237, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695446445502789237, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695446445502789237, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2084557944}
+    - target: {fileID: 1695446445502789237, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695446445502789237, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cambiarAMusicaInicio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695446445502789237, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: irInicio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695446445502789237, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Navegacion, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695446445502789237, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2156270083816430598, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12715,12 +12747,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2084557944}
     - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2084557944}
+    - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cambiarAMusicaInicio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: irInicio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Navegacion, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541235629549205690, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8942245162531553950, guid: 1427ad0c857558a45b14357c27438ded, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -13868,6 +13928,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2084557944}
+        m_TargetAssemblyTypeName: Navegacion, Assembly-CSharp
+        m_MethodName: cambiarAMusicaInicio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2084557942}
+        m_TargetAssemblyTypeName: ConfNivelesUI, Assembly-CSharp
+        m_MethodName: setCursorNormal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2084557944}
         m_TargetAssemblyTypeName: Navegacion, Assembly-CSharp
         m_MethodName: irInicio

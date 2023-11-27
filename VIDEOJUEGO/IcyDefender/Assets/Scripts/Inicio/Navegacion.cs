@@ -47,6 +47,11 @@ public class Navegacion : MonoBehaviour
         SceneManager.LoadScene("Inicio");
     }
 
+    public void cambiarAMusicaInicio()
+    {
+        Sonido.instance.CambiarMusicaInicio();
+    }
+
     public void irComenzarOmitirHistoria()
     {
         SceneManager.LoadScene("Nivel 1");
