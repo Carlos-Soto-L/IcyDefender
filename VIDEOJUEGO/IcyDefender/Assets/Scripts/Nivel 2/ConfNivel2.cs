@@ -11,19 +11,20 @@ public class ConfNivel2 : MonoBehaviour
     public Vector2 hotSpot = Vector2.zero;
     private DatosPlayer datosPlayer;
     private bool isAcaboNivel = false;
-    private GameObject[] aParedSalida;
+    //private GameObject[] aParedSalida;
     public GameObject alertaWin;
 
     private void Awake()
     {
         datosPlayer = DatosPlayer.DatosPlayerinstance;
         DatosPlayer.reasignarJugador();
-        aParedSalida = GameObject.FindGameObjectsWithTag("Salida");
+        //aParedSalida = GameObject.FindGameObjectsWithTag("Salida");
     }
     // Start is called before the first frame update
     void Start()
     {
         setCursor();
+        Sonido.instance.CambiarMusicaNivel2();
     }
 
     // Update is called once per frame
@@ -35,10 +36,10 @@ public class ConfNivel2 : MonoBehaviour
             isAcaboNivel = true;
             Debug.Log("Acabo nivel");
             // Habilitamos las salidas.
-            foreach (GameObject oSalida in aParedSalida)
-            {
-                oSalida.SetActive(false);
-            }
+            //foreach (GameObject oSalida in aParedSalida)
+            //{
+            //    oSalida.SetActive(false);
+            //}
 
             if (isAcaboNivel)
             {

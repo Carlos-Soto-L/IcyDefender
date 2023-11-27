@@ -90,7 +90,7 @@ public class ConfNivelesUI : MonoBehaviour
     }
 
 
-    private void setCursorNormal()
+    public void setCursorNormal()
     {
         Cursor.SetCursor(cursorTextureNormal, hotSpotNormal, cursorMode);
     }

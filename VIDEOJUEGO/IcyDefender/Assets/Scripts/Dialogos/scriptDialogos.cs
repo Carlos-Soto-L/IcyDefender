@@ -51,6 +51,7 @@ public class scriptJacoboComite : MonoBehaviour
     void Start()
     {
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        Sonido.instance.CambiarMusicaCine();
     }
 
     // Update is called once per frame

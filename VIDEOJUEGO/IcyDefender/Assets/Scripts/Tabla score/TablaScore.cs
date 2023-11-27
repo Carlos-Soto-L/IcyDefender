@@ -6,7 +6,6 @@ using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEditor.PlayerSettings;
 
 public class TablaScore : MonoBehaviour
 {
