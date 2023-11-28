@@ -1,3 +1,4 @@
+[Regresar](https://github.com/Carlos-Soto-L/IcyDefender/tree/main)
 # PERSONAJES
 # Vestimenta
 Los zombies tendrán puesto ropa casual, ya que la tragedia comenzó en un evento público no formal, los únicos que tendrán ropa formal, serán los miembros del comité de turismo. Jacobo tendrá su uniforme de trabajo y Marco llevará puesto una bata científica.
