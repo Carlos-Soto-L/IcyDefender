@@ -7,7 +7,7 @@ Es un adulto de 28 años residente de la ciudad de Dolores Hidalgo, ha trabajado
 
 ## Diseño:
 <div style="text-align: center;">
-    <img src="https://github.com/Carlos-Soto-L/IcyDefender/blob/main/PERSONAJES/JACOBO/DISE%C3%91O/PERSONAJE_JACOBO_001.png" alt="Descripción de la imagen">
+    <img src="https://github.com/Carlos-Soto-L/IcyDefender/blob/main/ASSETS/PERSONAJES/JACOBO/DISE%C3%91O/PERSONAJE_JACOBO_001.png" alt="Descripción de la imagen">
     
 # Miembros del comité de turismo:
 Estos son personas muy experimentadas en su cargo, son muy amables y siempre están buscando la forma de ayudar a los ciudadanos.
