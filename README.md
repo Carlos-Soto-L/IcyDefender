@@ -20,7 +20,7 @@ Jacobo, al despertar en su casa y escuchar el caos afuera, recurrió a las notic
 Revisó su celular y encontró varias llamadas perdidas de Marco, junto con un mensaje que decía: "Lo lamento mucho Jacobo, por favor, ven por mí". A pesar de sentirse traicionado, sabía que era el único que podía poner fin a la crisis. Emprendió un peligroso viaje hacia el centro del pueblo, enfrentándose a hordas de zombies mutados en el camino.
 Finalmente, Jacobo llegó al epicentro de la tragedia, donde se encontraban los zombies que antes habían sido miembros del comité, ahora extremadamente peligrosos. Jacobo decidió enfrentarlos en una lucha desesperada y, con gran esfuerzo, logró vencerlos.Mientras lo hacía, escucharon el sonido de un helicóptero que buscaba sobrevivientes. Jacobo y Marco fueron rescatados a tiempo. Poco después, con la ayuda del gobierno, Marco desarrolló una cura para revertir el efecto de la sustancia en las personas. Juntos, comenzaron a salvar vidas y a reconstruir la ciudad de Dolores Hidalgo.
 # PERSONAJES
-[Clic aqui](https://github.com/Carlos-Soto-L/IcyDefender/tree/main/ASSETS/PERSONAJES)
+Puedes conocer a los personajes del juego [aquí](https://github.com/Carlos-Soto-L/IcyDefender/tree/main/ASSETS/PERSONAJES).
 
 # ARMAS
 
