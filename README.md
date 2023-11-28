@@ -31,6 +31,8 @@ Con base en lo narrado en la historia y lo descrito en el punto anterior, el jue
 
 ![image](https://github.com/Carlos-Soto-L/IcyDefender/assets/67080087/3bc4e6f0-4406-4ade-8df6-68565806ad9f)
 
+# NIVELES Y ESCENARIOS
+Puedes encontrar una breve descripción de cada nivel y escenario del juego [aquí](https://github.com/Carlos-Soto-L/IcyDefender/tree/main/ASSETS/ESCENARIOS).
 # PROYECTO
 Puedes revisar el código fuente de este proyecto [aquí](https://github.com/Carlos-Soto-L/IcyDefender/tree/main/VIDEOJUEGO/IcyDefender).
 
