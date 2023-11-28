@@ -34,5 +34,7 @@ Con base en lo narrado en la historia y lo descrito en el punto anterior, el jue
 # BASE DE DATOS
 Se utilizó MongoDB y se puede consultar el modelo de la base de datos [Aqui](https://github.com/Carlos-Soto-L/IcyDefender/tree/main/PROPUESTA%20BASE%20DE%20DATOS).
 
+# CAPACITACIÓN
+Para la formación, se llevó a cabo el curso "Introducción a Unity para videojuegos 2D" en la plataforma Domestika. Puedes consultar el código del proyecto resultante [aquí](https://github.com/Carlos-Soto-L/IcyDefender/tree/main/CURSOS).
 # Link Trello
 <a href="https://trello.com/invite/b/U2Mb3YjK/ATTI7b24159989dd65e50207b618bac24c580E656A14/juego">Clic aqui</a>
