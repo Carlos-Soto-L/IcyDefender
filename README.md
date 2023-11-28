@@ -22,6 +22,9 @@ Finalmente, Jacobo llegó al epicentro de la tragedia, donde se encontraban los 
 # PERSONAJES
 [Clic aqui](https://github.com/Carlos-Soto-L/IcyDefender/tree/main/ASSETS/PERSONAJES)
 
+# ARMAS
+
+Puedes revisar el diseño y obtener una breve descripción de las armas presentes en el juego [aquí](https://github.com/Carlos-Soto-L/IcyDefender/tree/main/ASSETS/ARMAS/JACOBO).
 # GÉNERO
 El juego se clasificará con el género "Acción" debido a que los protagonistas constantemente se encuentran en situaciones de peligro por enfrentarse con zombies para sobrevivir.
 # PÚBLICO OBJETIVO
