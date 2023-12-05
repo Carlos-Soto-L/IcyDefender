@@ -6895,10 +6895,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Agradecemos sinceramente que hayas participado en la primera fase beta
-    de nuestro juego, IlyDefender. Te invitamos a dirigirte a la secci\xF3n de inicio
+    de nuestro juego, IcyDefender. Te invitamos a dirigirte a la secci\xF3n de inicio
     para consultar tu puntuaci\xF3n m\xE1s alta y compararla con la de otros jugadores.
     Tambi\xE9n tienes la opci\xF3n de intentar superar tu propio r\xE9cord volviendo
-    a jugar. \xA1Gracias por ser parte de esta experiencia!"
+    a jugar. \n\xA1Gracias por ser parte de esta experiencia!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15577,7 +15577,7 @@ Transform:
   m_GameObject: {fileID: 2128849171}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02265719, y: -0.035890266, z: -10.075063}
+  m_LocalPosition: {x: 0.022661928, y: -0.035890266, z: -10.075063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
